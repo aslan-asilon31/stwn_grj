@@ -21,30 +21,35 @@ SET FOREIGN_KEY_CHECKS = 0;
 -- Table structure for tbl_baptis
 -- ----------------------------
 DROP TABLE IF EXISTS `tbl_baptis`;
-CREATE TABLE `tbl_baptis`  (
-  `id_baptis` int NOT NULL AUTO_INCREMENT,
-  `hari_tanggal` datetime NULL DEFAULT NULL,
-  `waktu` time NULL DEFAULT NULL,
-  `tempat` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `dilayani` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `nama` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `jenis_kelamin` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `ttl` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `alamatnya` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
-  `nama_ayah` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `nama_ibu` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `baptis_sidi` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `hp` varchar(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `saksi1` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `saksi2` varchar(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `sumbangan` double NULL DEFAULT NULL,
-  `lampiran_akte` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `lampiran_nikah` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `lampiran_sidi` varchar(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
-  `lain_lain` text CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
-  `id_jemaat` int NOT NULL,
+CREATE TABLE `tbl_baptis` (
+  `id_baptis` INT NOT NULL AUTO_INCREMENT,
+  `hari_tanggal` DATETIME NULL DEFAULT NULL,
+  `waktu` TIME NULL DEFAULT NULL,
+  `tempat` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `dilayani` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `nama` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `jenis_kelamin` VARCHAR(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `ttl` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `alamatnya` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `nama_ayah` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `nama_ibu` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `baptis_sidi` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `hp` VARCHAR(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `saksi1` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `saksi2` VARCHAR(100) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `sumbangan` DOUBLE NULL DEFAULT NULL,
+  `lampiran_akte` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `lampiran_nikah` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `lampiran_sidi` VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL DEFAULT NULL,
+  `lain_lain` TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci NULL,
+  `id_jemaat` INT NOT NULL,
   PRIMARY KEY (`id_baptis`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = latin1 COLLATE = latin1_swedish_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB
+  AUTO_INCREMENT = 4
+  CHARACTER SET = latin1
+  COLLATE = latin1_swedish_ci
+  ROW_FORMAT = Dynamic;
+
 
 -- ----------------------------
 -- Records of tbl_baptis

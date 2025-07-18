@@ -1,9 +1,13 @@
-<?php include'../koneksi.php';
-if (isset($_GET['id'])){
-	$qry=mysqli_query($konek,"delete from tbl_baptis where id_baptis='".$_GET["id"]."'");
-	$data  = mysqli_fetch_array($qry);
-	header('location: baptis.php');
+<?php
+include '../koneksi.php';
 
+$id = $_GET['id'];
+
+// Query to delete the record
+$query = mysqli_query($konek, "DELETE FROM tbl_baptis WHERE id_baptis='$id'");
+
+if ($query) {
+	echo "<script>alert('Data berhasil dihapus!'); window.location='baptis.php';</script>";
+} else {
+	echo "<script>alert('Gagal menghapus data: " . mysqli_error($konek) . "'); window.location='baptis.php';</script>";
 }
-
-?>
